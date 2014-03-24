@@ -4,10 +4,12 @@ var http = require("http");
 var async = require("async");
 var _ = require("lodash");
 
+var argv = require('minimist')(process.argv.slice(2));
+
 console.log("Getting page");
 var request = http.get({
-    host: "127.0.0.1",
-    port: "8087",
+    host: argv["host"],
+    port: argv["port"],
     path: 'http://tophacksavailable.blogspot.com/'
 }, function(res) {
     var body = "";
@@ -34,8 +36,8 @@ function checkIP(ipList) {
             console.log(ip, response.statusCode);
             if (response.statusCode == 200) {
                 availableIP.push(ip);
+                callback();
             }
-            callback();
         }).on('error', function(e) {
             console.log(ip, e.message, "Error");
             if (e.message == "ECONNRESET") {
