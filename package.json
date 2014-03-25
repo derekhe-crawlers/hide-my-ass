@@ -1,26 +1,27 @@
 {
-    "name": "hide-my-ass",
-    "version": "0.0.1",
-    "description": "hide-my-ass ===========",
-    "main": "index.js",
-    "scripts": {
-        "test": "node hide-my-ass.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/derekhe/hide-my-ass"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/derekhe/hide-my-ass/issues"
-    },
-    "homepage": "https://github.com/derekhe/hide-my-ass",
-    "dependencies": {
-        "q": "^2.0.0",
-        "node-jquery": "^0.1.0",
-        "async": "^0.2.10",
-        "lodash": "^2.4.1",
-        "minimist": "0.0.8"
-    }
+  "name": "hide-my-ass",
+  "version": "0.0.1",
+  "description": "hide-my-ass ===========",
+  "main": "index.js",
+  "scripts": {
+    "test": "node hide-my-ass.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/derekhe/hide-my-ass"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derekhe/hide-my-ass/issues"
+  },
+  "homepage": "https://github.com/derekhe/hide-my-ass",
+  "dependencies": {
+    "q": "^2.0.0",
+    "node-jquery": "^0.1.0",
+    "async": "^0.2.10",
+    "lodash": "^2.4.1",
+    "minimist": "0.0.8",
+    "net-ping": "^1.1.9"
+  }
 }
