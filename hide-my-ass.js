@@ -72,8 +72,7 @@ function checkIP(ipList) {
         });
 
         deferred.promise.then(function(proxy) {
-            var ip = proxy.split(":")[0];
-            pingIp(ip).then(function(data) {
+            pingIp(proxy).then(function(data) {
                 availableIP.push(data);
             })
             callback();
@@ -92,7 +91,8 @@ function checkIP(ipList) {
     return deferred.promise;
 }
 
-function pingIp(target) {
+function pingIp(proxy) {
+    var target = proxy.split(":")[0];
     var deferred = Q.defer();
 
     var session = ping.createSession();
@@ -105,7 +105,7 @@ function pingIp(target) {
         } else {
             console.log(target + ": Alive (ms=" + ms + ")");
             var data = {
-                "proxy": target,
+                "proxy": proxy,
                 "speed": ms
             };
             deferred.resolve(data);
