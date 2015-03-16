@@ -14,3 +14,6 @@ Use without proxy
 sudo node hide-my-ass.js
 
 
+Updated
+========
+现在已经无法正常工作了
